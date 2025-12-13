@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ComposeDeliveryAppClone</string>
+
+    <string name="home">홈</string>
+    <string name="shopoing">장보기&amp;쇼핑</string>
+    <string name="like">찜</string>
+    <string name="history_order">주문내역</string>
+    <string name="my">마이배민</string>
+</resources>
