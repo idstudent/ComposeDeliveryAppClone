@@ -5,11 +5,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.exam.composedeliveryappclone.screen.FavoriteScreen
-import com.exam.composedeliveryappclone.screen.HomeScreen
-import com.exam.composedeliveryappclone.screen.ShoppingScreen
-import com.exam.composedeliveryappclone.screen.OrderHistoryScreen
-import com.exam.composedeliveryappclone.screen.MyPageScreen
+import com.exam.composedeliveryappclone.screen.main.FavoriteScreen
+import com.exam.composedeliveryappclone.screen.home.HomeScreen
+import com.exam.composedeliveryappclone.screen.main.ShoppingScreen
+import com.exam.composedeliveryappclone.screen.main.OrderHistoryScreen
+import com.exam.composedeliveryappclone.screen.main.MyPageScreen
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
