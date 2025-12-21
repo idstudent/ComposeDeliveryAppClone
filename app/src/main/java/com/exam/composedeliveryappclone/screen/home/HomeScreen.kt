@@ -60,6 +60,7 @@ fun HomeScreen() {
     {
         LazyColumn(
             state = listState,
+            // 리스트위에 헤더, 검색뷰를 얹기때문에 계산해서 쓰지않으면 보이지가 않음, height를 계산해서 그 아래로? 두는 방법
             contentPadding = PaddingValues(
                 top = with(density) {
                     topAreaHeight.toDp()
@@ -74,7 +75,7 @@ fun HomeScreen() {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .offset(y = (-20).dp)
+                        .offset(y = (-8).dp)
                         .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
                         .background(Color.White)
                         .padding(bottom = 20.dp)
