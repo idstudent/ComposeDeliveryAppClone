@@ -1,4 +1,4 @@
-package com.exam.composedeliveryappclone.screen.home
+package com.exam.composedeliveryappclone.screen.home.components
 
 
 import androidx.compose.foundation.background
@@ -34,7 +34,7 @@ fun TopHeader() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(start = 12.dp, end = 12.dp, top = 8.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
