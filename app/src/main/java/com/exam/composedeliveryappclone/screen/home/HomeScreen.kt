@@ -33,13 +33,16 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import com.exam.composedeliveryappclone.screen.home.components.BMartView
+import com.exam.composedeliveryappclone.screen.home.components.CategoryTabView
 import com.exam.composedeliveryappclone.ui.theme.Color40F3ED
+import java.util.Locale.Category
 
 @Composable
 fun HomeScreen() {
     val listState = rememberLazyListState()
     val density = LocalDensity.current
     var topAreaHeight by remember { mutableIntStateOf(0) }
+    var selectedTabIndex by remember { mutableIntStateOf(0) }
 
     val headerHeight by remember {
         derivedStateOf {
@@ -80,6 +83,16 @@ fun HomeScreen() {
                         .background(Color.White)
                         .padding(bottom = 20.dp)
                 ) {
+                    CategoryTabView(
+                        onTabSelected = { index ->
+                            selectedTabIndex = index
+                        }
+                    )
+
+                    when(selectedTabIndex) {
+
+                    }
+
                     repeat(50) { index ->
                         Text("테스트 $index", modifier = Modifier.padding(16.dp))
                     }
