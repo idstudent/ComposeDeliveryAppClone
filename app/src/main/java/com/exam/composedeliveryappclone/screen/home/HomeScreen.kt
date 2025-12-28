@@ -25,17 +25,18 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
-import androidx.compose.ui.input.nestedscroll.NestedScrollSource
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import com.exam.composedeliveryappclone.screen.home.components.BMartView
+import com.exam.composedeliveryappclone.screen.home.components.BenefitContent
 import com.exam.composedeliveryappclone.screen.home.components.CategoryTabView
+import com.exam.composedeliveryappclone.screen.home.components.FoodDeliveryContent
+import com.exam.composedeliveryappclone.screen.home.components.GiftContent
+import com.exam.composedeliveryappclone.screen.home.components.PickupContent
+import com.exam.composedeliveryappclone.screen.home.components.ShoppingContent
+import com.exam.composedeliveryappclone.screen.home.components.YearEndSpecialContent
 import com.exam.composedeliveryappclone.ui.theme.Color40F3ED
-import java.util.Locale.Category
 
 @Composable
 fun HomeScreen() {
@@ -90,7 +91,12 @@ fun HomeScreen() {
                     )
 
                     when(selectedTabIndex) {
-
+                        0 -> FoodDeliveryContent()
+                        1 -> PickupContent()
+                        2 -> ShoppingContent()
+                        3 -> YearEndSpecialContent()
+                        4 -> GiftContent()
+                        5 -> BenefitContent()
                     }
 
                     repeat(50) { index ->
