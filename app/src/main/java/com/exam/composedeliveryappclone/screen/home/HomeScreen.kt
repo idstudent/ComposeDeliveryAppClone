@@ -1,6 +1,7 @@
 package com.exam.composedeliveryappclone.screen.home
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -35,6 +36,7 @@ import com.exam.composedeliveryappclone.screen.home.components.FoodDeliveryConte
 import com.exam.composedeliveryappclone.screen.home.components.GiftContent
 import com.exam.composedeliveryappclone.screen.home.components.PickupContent
 import com.exam.composedeliveryappclone.screen.home.components.ShoppingContent
+import com.exam.composedeliveryappclone.screen.home.components.StoreCategoryView
 import com.exam.composedeliveryappclone.screen.home.components.YearEndSpecialContent
 import com.exam.composedeliveryappclone.ui.theme.Color40F3ED
 
@@ -69,7 +71,8 @@ fun HomeScreen() {
                 top = with(density) {
                     topAreaHeight.toDp()
                 }
-            )
+            ),
+            verticalArrangement = Arrangement.spacedBy((-8).dp)
         ) {
             item {
                 BMartView()
@@ -79,10 +82,9 @@ fun HomeScreen() {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .offset(y = (-8).dp)
+
                         .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
                         .background(Color.White)
-                        .padding(bottom = 20.dp)
                 ) {
                     CategoryTabView(
                         onTabSelected = { index ->
@@ -99,10 +101,11 @@ fun HomeScreen() {
                         5 -> BenefitContent()
                     }
 
-                    repeat(50) { index ->
-                        Text("테스트 $index", modifier = Modifier.padding(16.dp))
-                    }
+
                 }
+            }
+            item {
+                StoreCategoryView()
             }
         }
 

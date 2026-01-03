@@ -18,7 +18,8 @@ import com.exam.composedeliveryappclone.ui.theme.ColorE8
 fun CategoryItem(
     emoji: String,
     title: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    bgColor: Color = ColorE8
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -28,7 +29,7 @@ fun CategoryItem(
             modifier = Modifier
                 .size(60.dp)
                 .clip(RoundedCornerShape(16.dp))
-                .background(ColorE8),
+                .background(bgColor),
             contentAlignment = Alignment.Center
         ) {
             Text(

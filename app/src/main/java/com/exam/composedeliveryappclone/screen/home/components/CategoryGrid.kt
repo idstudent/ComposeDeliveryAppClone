@@ -32,7 +32,7 @@ fun CategoryGrid(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(top = 16.dp)
     ) {
         categories.chunked(5).forEach {
             Row(
